@@ -27,10 +27,9 @@
       background: #fafafa;
     }
 	
-	.topbar, .schemes, .try-out__btn, .url {
-		visibility:hidden;
-	}
-	
+	  .topbar, .scheme-container, .try-out__btn {
+      display: none;
+    }
   </style>
 </head>
 
@@ -74,12 +73,15 @@
 
 <script src="./swagger-ui-bundle.js"> </script>
 <script src="./swagger-ui-standalone-preset.js"> </script>
+<script src="api-specifications.js"> </script>
+
 <script>
 window.onload = function() {
   
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "https://public.boxcloud.com/d/1/5m8N0Zl9ASSsUgW8QaRR_0XwGr6VmJMPLh7bFaJ6kC4AQ1JZqIwXROjUHE7C4yCXKlc7fulq3mY40xUh3x7MNgaVo0B2-mX1PHCxkErPCx7f-YXkLFV_wYYmkcENTQF7uYyFuGYgyGQaU_LIFbkWEuYJsP_tzwxKu1acWseix5wCdlJPP7wubCkaMzNTw6oZqnNqST-C-l9WaoPiTMbZt3tE1f7VZVFqCEcG5aaGJhHcXQ5VZ6zxkk140iJSMMUJFUSPGvW9c2zZ6GRThCGliX1W_Lf5i_mw1O6KY5JC0oIn61LeNQW9YTSbAe0PPJbPD1bcaLTpexiBRkc5etiZTdbslpl9z4eNJaJ-HrqT6rMWaf60vEVahpo7hQ18dYPmRoufcs9SCoKv6FZpRnZq_l30fDfGGQo7isBRJqcIhxDZ9_jFgrB3V8hEq9mh5yiI19mgpD0F8XfWwJmRentlj9t0tSnI-HcBqB9NFJLI3SjfZbCa9uXBBDzr4b9JklPgVUnbNRKxBpLR0yX76E_hP3_SNQkvOUb9UAr3srzNMVDmCG1-ntzR5NGjfs-95KHpQQSpI_EmdraCRbyk3jpqn6mqTs3sD53KDXTswierhdCf4Y839lEaTJ6feZ5Qyu1096Xof5rFv18MGPH_36qK37EIBKsVujw1UQwjL5yjUppmaf5Nl1MCZa5UuQzb0Rk1B39he1t1hIbU2mz3bfyIN2c79jTH6-pP6ybj3UoKo8Vy0u2VInZTBnretKOIFb3yWSFzw_1YeffUeipNUlIy6lG8g8YSFRaV3tM8nobAtvxBozuD95NA1z3Z0F11D8TxRfTK5brHEQrhSNQy_2rpl362jcGydVHzuKgfee9FHLcQJtb_XAYAzwiidZxjaJsZEMCztFUQwuXzZ8vBUzUQvOKk3Gm7Ekov6TNyzhAzFDvHYfby42MTfBmBMkSqadEsgX4JOxZ9QwHrHG3u7nPTOK076TTZ7kC5XRo-6Sv3gyAwkeCSnaRL96mYQCO8Mp05JPKEjyTZVfqQWNs1ZALogXZPYmEZUOLVZuGAOYsb5m2it6kCffgK-HbaEZYza3CXfgsO-v6CmS3oq3uzqiLMQkmRMpB1ENcXIRzNoQdvbf3so3gy1pipxxmcqa3D1UfnWx8cp72hFBDSiJ1rY81e_hsxorM8Xzh4RkS1ZiHXtvC2PMbCECGBFZfDp3-tm0j47VRj7ehGedBerdP34QyVA_aQn3r0g32Laj5ma7AnqEtR/download",
+    url: "",
+    spec : api_specifications,
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
@@ -93,6 +95,8 @@ window.onload = function() {
   })
 
   window.ui = ui
+
+
 }
 </script>
 </body>
